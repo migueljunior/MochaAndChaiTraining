@@ -54,7 +54,28 @@ describe('Scenarios for FizzBuzz Exercice', function () {
     });
 
     it('Should return the same number with 0', function () {
-      methods.FizzBuzzMethod(0).should.equal(0);
+      methods.FizzBuzzMethod(0).should.equal('FizzBuzz');
+    });
+  });
+
+  describe('Insert two numbers', function () {
+    it('Insert first number 2 and second number 3', function () {
+      methods.FizzBuzzString(2, 3).should.equal('2,Fizz');
+    });
+
+    it('Insert first number 1 and second number 5', function () {
+      expect(methods.FizzBuzzString(1, 5)).to.equal('1,2,Fizz,4,Buzz');
+    });
+
+    it('Insert first number -10 and second number 5', function () {
+      expect(methods.FizzBuzzString(-10, 5))
+      .to
+      .equal('Buzz,Fizz,-8,-7,Fizz,Buzz,-4,Fizz,-2,-1,FizzBuzz,1,2,Fizz,4,Buzz');
+    });
+
+    it('Insert first number 1 and second number 15', function () {
+      assert.equal(methods.
+        FizzBuzzString(1, 15), '1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz');
     });
   });
 });
