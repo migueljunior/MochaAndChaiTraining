@@ -1,5 +1,7 @@
 /**
- * Returns 'Fizz' if the number is multiply of 3, returns 'Buzz' if the number is multiply of 5, returns 'FizzBuzz' if the number is multiply of 3 and 5, returns the same number if not multiply of 3 and 5
+ * Returns 'Fizz' if the number is multiply of 3, returns 'Buzz' if the number is multiply of 5,
+ * returns 'FizzBuzz' if the number is multiply of 3 and 5,
+ * returns the same number if not multiply of 3 and 5
  * @author Junior Rodriguez
  * @example
  * fizzBuzz(3); // returns Fizz
