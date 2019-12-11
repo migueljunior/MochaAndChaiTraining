@@ -14,6 +14,10 @@ describe('Scenarios for FizzBuzz Exercice', function () {
     it('Return Buzz with 10', function () {
       assert.equal(methods.FizzBuzzMethod(10), 'Buzz');
     });
+
+    it('Return Message "Only enter a Numbers"', function () {
+      assert.equal(methods.FizzBuzzMethod('a'), 'Only enter a Numbers');
+    });
   });
 
   describe('Tests using Chai', function () {
@@ -34,6 +38,10 @@ describe('Scenarios for FizzBuzz Exercice', function () {
     it('Expect return FizzBuzz with 30', function () {
       expect(methods.FizzBuzzMethod(30)).to.equal('FizzBuzz');
     });
+
+    it('Expect return FizzBuzz with -30', function () {
+      expect(methods.FizzBuzzMethod(-30)).to.equal('FizzBuzz');
+    });
   });
 
   describe('Test using Should Chai', function () {
@@ -43,6 +51,10 @@ describe('Scenarios for FizzBuzz Exercice', function () {
 
     it('Should return the same number with 16', function () {
       methods.FizzBuzzMethod(16).should.equal(16);
+    });
+
+    it('Should return the same number with 0', function () {
+      methods.FizzBuzzMethod(0).should.equal(0);
     });
   });
 });
