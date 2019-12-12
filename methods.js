@@ -11,6 +11,19 @@
  * @returns {(string\|number)}
  */
 function fizzBuzz(number) {
+  if (isNumber(number) && multiplyOfThree(number) && multiplyOfFive(number)) {
+    return 'FizzBuzz';
+  } else if (isNumber(number) && multiplyOfThree(number)) {
+    return 'Fizz';
+  } else if (isNumber(number) && multiplyOfFive(number)) {
+    return 'Buzz';
+  } else if (isNumber(number)) {
+    return number;
+  } else {
+    return 'Only enter a Numbers';
+  }
+};
+/*
   if (isNumber(number)) {
     if (multiplyOfThree(number) && multiplyOfFive(number)) {
       return 'FizzBuzz';
@@ -24,7 +37,7 @@ function fizzBuzz(number) {
   } else {
     return 'Only enter a Numbers';
   }
-};
+};*/
 
 /**
  * Returns true when the number is divisible by 3 or false when the number is not divisible by 3

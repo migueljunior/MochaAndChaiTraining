@@ -7,25 +7,25 @@ const methods = require('../Methods.js');
 
 describe('Scenarios for FizzBuzz Exercice', function () {
   describe('Tests using Mocha', function () {
-    it('Return Fizz with 3', function () {
+    it('Returns Fizz with 3', function () {
       assert.equal(methods.FizzBuzzMethod(3), 'Fizz');
     });
 
-    it('Return Buzz with 10', function () {
+    it('Returns Buzz with 10', function () {
       assert.equal(methods.FizzBuzzMethod(10), 'Buzz');
     });
 
-    it('Return Message "Only enter a Numbers"', function () {
+    it('Returns Message "Only enter a Numbers"', function () {
       assert.equal(methods.FizzBuzzMethod('a'), 'Only enter a Numbers');
     });
   });
 
   describe('Tests using Chai', function () {
-    it('Return Fizz with 6', function () {
+    it('Returns Fizz with 6', function () {
       assert.equal(methods.FizzBuzzMethod(6), 'Fizz');
     });
 
-    it('Return Buzz with 5', function () {
+    it('Returns Buzz with 5', function () {
       assert.equal(methods.FizzBuzzMethod(5), 'Buzz');
     });
   });
@@ -53,7 +53,7 @@ describe('Scenarios for FizzBuzz Exercice', function () {
       methods.FizzBuzzMethod(16).should.equal(16);
     });
 
-    it('Should return the same number with 0', function () {
+    it('Should return FizzBuzz with 0', function () {
       methods.FizzBuzzMethod(0).should.equal('FizzBuzz');
     });
   });
@@ -76,6 +76,11 @@ describe('Scenarios for FizzBuzz Exercice', function () {
     it('Insert first number 1 and second number 15', function () {
       assert.equal(methods.
         FizzBuzzString(1, 15), '1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz');
+    });
+
+    it('Insert first number 4 and second number 4', function () {
+      assert.equal(methods.
+        FizzBuzzString(4, 4), '4');
     });
   });
 });
